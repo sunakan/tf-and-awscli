@@ -8,7 +8,8 @@ RUN apt-get update \
     curl \
     gnupg \
     unzip \
-    libdigest-sha-perl
+    libdigest-sha-perl \
+    make
 
 ARG AWS_CLI_VERSION
 RUN pip install --no-cache-dir awscli==${AWS_CLI_VERSION}

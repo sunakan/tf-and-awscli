@@ -3,9 +3,9 @@ version: "3.7"
 
 services:
   app:
-    working_dir: ${WORKING_DIR:-/app}
-    entrypoint: ${ENTRYPOINT}
+    working_dir: /app/
     image: tf_and_aws
+    entrypoint: ${ENTRYPOINT}
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,7 +13,6 @@ services:
         DEBIAN_PYTHON_VERSION_TAG: ${DEBIAN_PYTHON_VERSION_TAG}
         AWS_CLI_VERSION: ${AWS_CLI_VERSION}
         TERRAFORM_VERSION: ${TERRAFORM_VERSION}
-    environment:
-      AWS_ACCESS_KEY_ID: ${AWS_ACCESS_KEY_ID}
-      AWS_SECRET_ACCESS_KEY: ${AWS_SECRET_ACCESS_KEY}
-      AWS_DEFAULT_REGION: ${AWS_DEFAULT_REGION}
+    volumes:
+      - ./terraform:/app
+      - ./aws:/root/.aws
