@@ -1,3 +1,6 @@
+.env
+aws-conf
+aws
 
 # Created by https://www.gitignore.io/api/vim,linux,macos,emacs,windows,terraform,jetbrains+all
 # Edit at https://www.gitignore.io/?templates=vim,linux,macos,emacs,windows,terraform,jetbrains+all
@@ -257,5 +260,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.gitignore.io/api/vim,linux,macos,emacs,windows,terraform,jetbrains+all
-
-.env
